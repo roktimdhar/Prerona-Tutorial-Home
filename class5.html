@@ -1,0 +1,404 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Class 5</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="allclass.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+	<link href="https://banglawebfonts.pages.dev/css/tiro-bangla.css" rel="stylesheet">
+	<link href="https://banglawebfonts.pages.dev/css/bornomala.css" rel="stylesheet">
+	<link href="https://banglawebfonts.pages.dev/css/noto-serif-bengali.css" rel="stylesheet">
+</head>
+<!-- Home starts Here -->
+<body>
+<div class="title">	
+	<h1 id="first"><b>Prerona Tutorial Home </b><br>
+	<img src="Logo.png" alt="Sorry! Logo is not found">
+	<h2 id="ban"> প্রেরণা টিউটোরিয়াল হোম </h2>
+	<br>
+	<h3 id="loc"><marquee behavior="fast" direction=""> জামালখান, চট্টগ্রাম প্রেস ক্লাব(বাতিঘর)-এর বিপরীতে, শাহ্ ওয়ালীউল্লাহ ইনস্টিটিউট এর পার্শ্ব গলি, ইরেক্ট বিল্ডিং এর ৪র্থ তলায় </marquee> </h3> </p>
+</div>
+<i class="fa-solid fa-2x fa-bars" style="color: #093786;" id="menu"></i>
+<nav class="mobile-menu" id="hide">
+        <a href="Registration.html">Registration Form</a>
+        <a href="Home Page.html">Home</a>
+        <a href="Teacher.html">Teacher</a>
+        <a href="ArchiveClass.html">Archive Classes</a>
+        <a href="ClassRoutine.html">Routine</a>
+        <a href="Tuition Fee.html">Fee</a>
+        <a href="Notice.html">Notice</a>
+    </nav>
+<!-- Home Ends Here -->
+<body>
+    <div class="container">
+        <h1>Archive Class</h1>
+        <p class="subtitle">Student can't visit teacher's panal</p>
+
+        <!-- USER SECTION -->
+        <div class="access-panel" id="userPanel">
+            <div class="panel-title user-title">👤Student Portal</div>
+            <div class="success-indicator">✓</div>
+            <div class="input-group">
+                <input type="text" class="forid" placeholder="Student ID" maxlength="15">
+            </div>
+            <div class="input-group">
+                <input type="password" id="userPass" placeholder="Student Password" maxlength="15">
+            </div>
+            <div>
+            <button class="verify-btn" onclick="checkAccess('user')">STUDENT ACCESS </button>
+            <div id="userError" class="error-message">❌ Invalid User Password!</div>
+            <div id="userContent" class="content-area">
+                <!-- Video List -->
+        <section class="video-list" id="videoList">
+            <p class="empty-state">No videos added yet. Paste a YouTube link above! 🎥</p>
+        </section>
+            </div>
+            </div>
+            <button class="reset-btn verify-btn" onclick="resetAll()">🔄 Reset All Access</button>
+        </div>
+
+        <!-- ADMIN SECTION -->
+        <div class="access-panel" id="adminPanel">
+            <div class="panel-title admin-title">Teacher</div>
+            <div class="success-indicator"></div>
+            <div class="input-group">
+                <input type="text" class="forid" placeholder="Teacher ID" maxlength="15">
+            </div>
+            <div class="input-group">
+                <input type="password" id="adminPass" placeholder="Teacher Password" maxlength="15">
+            </div>
+            <div>
+            <button class="verify-btn" onclick="checkAccess('admin')">TEACHER ACCESS</button>
+            </div>
+            <div id="adminError" class="error-message">Admin Access Denied!</div>
+            <div id="adminContent" class="content-area">
+                <!-- Header -->
+        <header class="header">
+            <p>Paste YouTube link & add caption to embed video</p>
+        </header>
+
+        <!-- Controls Section -->
+        <section class="controls">
+            <div class="input-group">
+                <label for="youtubeUrl">📺 YouTube Link</label>
+                <div class="input-wrapper">
+                    <input type="url" id="youtubeUrl" placeholder="https://www.youtube.com/watch?v=...">
+                    <button id="addVideoBtn" class="btn-primary">
+                        <i class="fas fa-plus"></i> Add Video
+                    </button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="videoCaption">Caption (Optional)</label>
+                <input type="text" id="videoCaption" placeholder="Enter video caption...">
+            </div>
+             <!-- Clear All Button -->
+        <div class="clear-section">
+            <button id="clearAllBtn" class="btn-danger">
+                <i class="fas fa-trash"></i> Clear All Videos
+            </button>
+        </div>
+        </section>
+         <button class="reset-btn verify-btn" onclick="resetAll()">🔄 Reset All Access</button>
+            </div>
+        </div>
+
+        <div class="exclusive-notice">
+            ℹ️ <strong>Exclusive Access:</strong> Students, don't try to access in teacher's portal!
+        </div>
+    </div>
+
+<!-- Footer starts Here -->
+<footer>
+<div class="contact" margin-bottom="0">
+	<p id="con"> <b> Contact </p>
+		<div class="icon">
+			<a href="tel:01813-996777" id="call-icon"> 
+				<i id="cell" class="fa-solid fa-phone-volume fa-shake fa-beat" style="color: blue"></i>
+				01813-996777 
+			</a> 
+			<a href="https://www.facebook.com/share/1DLHaLFwF3/" target="_blank" class="icon-logo"> 
+				<i class="fa-brands fa-facebook fa-beat" style="color: #dee6ec;"> </i>
+			</a>
+			<a href="mailto:roktimdhar2006@gmail.com" target="_blank" class="icon-logo">
+				<i class="fa-solid fa-m fa-beat" style="color: #e00b35;"></i>
+			</a>
+			
+			<a href="https://wa.me/01813996777" target="_blank" class="icon-logo">
+				<i class="fa-brands fa-whatsapp fa-beat" style="color: #00f504;"></i>
+			</a>
+			<a href="https://maps.app.goo.gl/QWzcqiACBeg7jsCGA" target="_blank" class="icon-logo">
+				<i class="fa-solid fa-location-dot fa-bounce" style="color: #ff1900;"></i>
+			</a>
+		</div>
+	<p id="copy" align="center"> &copy; Prerona Tutorial Home | Choton's English Care | All rights reserved </p> 
+</div>
+</footer>
+<!-- Footer Ends Here -->
+    <script>
+let videos = JSON.parse(localStorage.getItem('classVideos')) || [];
+let currentUser = null;
+
+// Initialize video list for students
+function initVideoList() {
+    const videoList = document.getElementById('videoList');
+    videoList.innerHTML = '';
+    
+    if (videos.length === 0) {
+        videoList.innerHTML = '<p class="empty-state">No videos added yet. Please contact your teacher! 🎥</p>';
+        return;
+    }
+    
+    videos.forEach((video, index) => {
+        const videoItem = document.createElement('div');
+        videoItem.className = 'video-item';
+        videoItem.innerHTML = `
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/${getVideoId(video.url)}?rel=0" 
+                    frameborder="0" 
+                    allowfullscreen
+                    class="video-player">
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h4>${video.caption || 'Class Video'}</h4>
+                <small>Added: ${new Date(video.timestamp).toLocaleDateString()}</small>
+            </div>
+        `;
+        videoList.appendChild(videoItem);
+    });
+}
+
+// Extract YouTube video ID from URL
+function getVideoId(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
+// Validate YouTube URL
+function isValidYouTubeUrl(url) {
+    return getVideoId(url) !== null;
+}
+
+// Check access - ONLY PASSWORD MATTERS (ID is ignored)
+function checkAccess(userType) {
+    const passInput = document.getElementById(userType === 'user' ? 'userPass' : 'adminPass');
+    const errorDiv = document.getElementById(userType === 'user' ? 'userError' : 'adminError');
+    const contentDiv = document.getElementById(userType === 'user' ? 'userContent' : 'adminContent');
+    const successIndicator = document.querySelector(`#${userType}Panel .success-indicator`);
+    
+    const password = passInput.value.trim();
+    
+    // Student password (change this as needed)
+    const studentPassword = "CSB0T5";
+    
+    // Teacher password (change this as needed)
+    const teacherPassword = "CS552405";
+    
+    if (userType === 'user') {
+        if (password === studentPassword) {
+            currentUser = 'student';
+            showSuccess(userType, contentDiv, successIndicator, errorDiv);
+            initVideoList();
+        } else {
+            showError(userType, errorDiv);
+        }
+    } else if (userType === 'admin') {
+        if (password === teacherPassword) {
+            currentUser = 'teacher';
+            showSuccess(userType, contentDiv, successIndicator, errorDiv);
+            renderAdminInterface();
+        } else {
+            showError(userType, errorDiv);
+        }
+    }
+}
+
+// Show success and reveal content
+function showSuccess(userType, contentDiv, successIndicator, errorDiv) {
+    document.getElementById(`${userType}Error`).style.display = 'none';
+    contentDiv.style.display = 'block';
+    successIndicator.textContent = '✓';
+    successIndicator.style.display = 'block';
+    successIndicator.style.color = '#28a745';
+}
+
+// Show error
+function showError(userType, errorDiv) {
+    document.getElementById(`${userType}Content`).style.display = 'none';
+    errorDiv.style.display = 'block';
+    errorDiv.style.color = '#dc3545';
+}
+
+// Reset all access
+function resetAll() {
+    currentUser = null;
+    document.querySelectorAll('.success-indicator').forEach(ind => {
+        ind.textContent = '';
+        ind.style.display = 'none';
+    });
+    document.querySelectorAll('.content-area').forEach(content => {
+        content.style.display = 'none';
+    });
+    document.querySelectorAll('.error-message').forEach(error => {
+        error.style.display = 'none';
+    });
+    document.querySelectorAll('input').forEach(input => {
+        input.value = '';
+    });
+    document.getElementById('videoList').innerHTML = '<p class="empty-state">No videos added yet. Paste a YouTube link above! 🎥</p>';
+}
+
+// Admin interface functions
+function renderAdminInterface() {
+    // Load existing videos
+    updateVideoList();
+    
+    // Add event listeners
+    document.getElementById('addVideoBtn').onclick = addVideo;
+    document.getElementById('clearAllBtn').onclick = clearAllVideos;
+    
+    // Enter key support
+    document.getElementById('youtubeUrl').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') addVideo();
+    });
+}
+
+function addVideo() {
+    const url = document.getElementById('youtubeUrl').value.trim();
+    const caption = document.getElementById('videoCaption').value.trim();
+    
+    if (!url) {
+        alert('❌ Please enter a YouTube URL!');
+        return;
+    }
+    
+    if (!isValidYouTubeUrl(url)) {
+        alert('❌ Please enter a valid YouTube URL!\nExample: https://www.youtube.com/watch?v=VIDEO_ID');
+        return;
+    }
+    
+    // Check for duplicate
+    if (videos.some(video => getVideoId(video.url) === getVideoId(url))) {
+        alert('⚠️ This video is already added!');
+        return;
+    }
+    
+    // Add new video
+    const newVideo = {
+        url: url,
+        caption: caption || `Class Video - ${new Date().toLocaleDateString()}`,
+        timestamp: new Date().toISOString()
+    };
+    
+    videos.unshift(newVideo); // Add to beginning (newest first)
+    localStorage.setItem('classVideos', JSON.stringify(videos));
+    
+    // Clear inputs
+    document.getElementById('youtubeUrl').value = '';
+    document.getElementById('videoCaption').value = '';
+    
+    updateVideoList();
+    initVideoList(); // Update student view too
+    alert('✅ Video added successfully! 🎥');
+}
+
+function updateVideoList() {
+    // Create video list section if not exists
+    let videoList = document.querySelector('#adminContent .video-list');
+    if (!videoList) {
+        const adminContent = document.getElementById('adminContent');
+        videoList = document.createElement('section');
+        videoList.className = 'video-list';
+        videoList.id = 'adminVideoList';
+        adminContent.appendChild(videoList);
+    }
+    
+    videoList.innerHTML = '';
+    if (videos.length === 0) {
+        videoList.innerHTML = '<p class="empty-state">No videos added yet! Add your first video above.</p>';
+        return;
+    }
+    
+    videos.forEach((video, index) => {
+        const videoItem = document.createElement('div');
+        videoItem.className = 'video-item admin-video';
+        videoItem.innerHTML = `
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/${getVideoId(video.url)}?rel=0" 
+                    frameborder="0" 
+                    allowfullscreen
+                    class="video-player">
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h4>${video.caption}</h4>
+                <small>Added: ${new Date(video.timestamp).toLocaleDateString()}</small>
+                <div style="margin-top: 10px;">
+                    <button class="delete-btn" onclick="deleteVideo(${index})" style="
+                        background: #dc3545; color: white; border: none; padding: 8px 15px; 
+                        border-radius: 5px; cursor: pointer; font-size: 14px;
+                    ">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
+            </div>
+        `;
+        videoList.appendChild(videoItem);
+    });
+}
+
+function deleteVideo(index) {
+    if (confirm('🗑️ Are you sure you want to delete this video?\nThis action cannot be undone!')) {
+        videos.splice(index, 1);
+        localStorage.setItem('classVideos', JSON.stringify(videos));
+        updateVideoList();
+        initVideoList();
+        alert('✅ Video deleted successfully!');
+    }
+}
+
+function clearAllVideos() {
+    if (confirm('⚠️ DELETE ALL VIDEOS?\nThis will remove ALL videos permanently!')) {
+        if (confirm('🔴 FINAL WARNING: This cannot be undone! Continue?')) {
+            videos = [];
+            localStorage.setItem('classVideos', JSON.stringify(videos));
+            updateVideoList();
+            initVideoList();
+            alert('🗑️ All videos cleared successfully!');
+        }
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    document.getElementById('menu').addEventListener('click', function() {
+        document.getElementById('hide').classList.toggle('active');
+    });
+    
+    // Hide content areas and error messages initially
+    document.querySelectorAll('.content-area').forEach(content => {
+        content.style.display = 'none';
+    });
+    document.querySelectorAll('.error-message').forEach(error => {
+        error.style.display = 'none';
+    });
+    
+    // Success indicators initially hidden
+    document.querySelectorAll('.success-indicator').forEach(ind => {
+        ind.style.display = 'none';
+    });
+    
+    console.log('✅ Archive Class system loaded! Videos:', videos.length);
+});
+</script>
+</body>
+</html>

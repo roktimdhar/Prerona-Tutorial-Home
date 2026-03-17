@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Video Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        /* Styles for the Login Form */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't widen the element */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+            display: none; /* Hidden by default */
+        }
+
+        /* Styles for the Video Section */
+        #video-section {
+            display: none; /* Hidden by default */
+        }
+
+        video {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Section -->
+        <div id="login-section">
+            <h2>Restricted Content</h2>
+            <p>Please enter your credentials.</p>
+            
+            <input type="text" id="idInput" placeholder="Enter ID">
+            <input type="password" id="passInput" placeholder="Enter Password">
+            
+            <button onclick="checkCredentials()">Unlock Video</button>
+            
+            <p id="error-msg" class="error-message">Incorrect ID or Password!</p>
+        </div>
+
+        <!-- Video Section (Initially Hidden) -->
+        <div id="video-section">
+            <h2>Access Granted</h2>
+            <!-- Using a sample video from the internet -->
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br><br>
+            <button onclick="location.reload()" style="background-color: #6c757d;">Lock Again</button>
+        </div>
+    </div>
+
+    <script>
+        function checkCredentials() {
+            // 1. Get the values from the input fields
+            const idValue = document.getElementById('idInput').value;
+            const passValue = document.getElementById('passInput').value;
+            
+            // 2. Define the correct credentials
+            const correctId = "admin";
+            const correctPass = "1234";
+
+            // 3. Get references to the HTML elements we need to show/hide
+            const loginSection = document.getElementById('login-section');
+            const videoSection = document.getElementById('video-section');
+            const errorMsg = document.getElementById('error-msg');
+
+            // 4. Check if the input matches the correct credentials
+            if (idValue === correctId && passValue === correctPass) {
+                // Success: Hide login, Show video
+                loginSection.style.display = 'none';
+                videoSection.style.display = 'block';
+                errorMsg.style.display = 'none';
+            } else {
+                // Failure: Show error message
+                errorMsg.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

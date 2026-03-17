@@ -1,0 +1,205 @@
+/* Home Starts Here*/
+*{
+	padding:0;
+margin:0;
+text-decoration: none;
+outline: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+padding:0;
+margin:0;
+background-color:#9190906b;
+}
+p,h1,h2,h3{padding:0;
+margin:0;}
+.title{
+	background-image: linear-gradient(to top, #053575, #002454);
+		color: white;
+		padding:0;
+		margin-bottom:0;
+}
+#first{ font-family: 'Crimson Pro', serif;
+        font-size: 48px;
+		text-align: center;
+		padding:0;
+		margin:0;
+	}
+#ban{
+  font-family: 'Tiro Bangla', serif;
+  font-size: 35px;
+  font-style: normal;
+  text-align: center;
+	padding:0;
+margin-bottom:0px;
+}
+#loc{
+	font-family: 'Bensen Handwriting', sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	text-align: center;
+ 	padding:0;
+	margin:0;
+	margin-bottom:0px;
+}
+.list{
+	position: sticky;
+	margin: 0;
+	padding: 0;
+	top:0;
+	left:0;
+	z-index: 100;
+	text-decoration: none;
+}
+nav{
+	margin-top: 0;
+	font-family: 'times';
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-style: italic;
+	position: sticky;
+	margin: 0;
+	padding: 0;
+	top:0;
+	left:0;
+	z-index: 100;
+	text-decoration: none;
+}
+.navbar{
+	background-color: #d5eaff;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	text-decoration: none;
+}
+.linking a{
+	transition: all 0.3s;
+	color: rgb(0, 0, 141);
+
+}
+.linking:hover a{
+		color: rgb(3, 90, 131);
+		text-decoration: none;
+		transition: all 0.3s;
+}
+img{
+	width:150;
+	height:150;
+	padding:0;
+	margin:0;
+}
+a{
+	text-decoration: none;
+}
+.r:hover{
+background-color:#DBD41F;
+} 
+.video-link{
+	padding:0;
+	margin-right:10;
+	margin-left:20;
+	  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+	font-size: 18px;
+	float: right;
+}
+#link1 :hover{
+	color: #1DACD6;
+}
+#link2 :hover{
+	color: #1DACD6;
+}
+#video{
+	height:250; 
+	max-width: 450;
+	border:solid black;
+  display: block;
+  margin: auto auto;
+}
+#caption{
+	font-family: 'Times New Roman', serif;
+	font-size:30;
+	font-style: solid;
+	color: red;
+	text-align: center;
+}
+.facilities{
+	font-family: 'Noto Serif Bengali', serif;
+  font-size: 20px;
+  font-style: normal;
+	list-style-type: square;
+}
+.fact li{
+  list-style-type: circle;
+}
+.contact{
+	padding:0;
+	margin:0;
+	color: white;
+	text-align: center;
+	font-family: Garamond, serif;
+	font-family:'Noto Serif Bengali', serif;
+	font-size: 23px;
+	background-image: linear-gradient(#2b5c7a, #152455);
+}
+#con{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: oblique;
+}
+footer{
+	padding:0px;
+	margin:0;
+}
+#copy {
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 15px;
+}
+.call{
+	border-radius: 10;
+	color: #42a0df;
+}
+#tt a{
+	font-family: Garamond, serif;
+	color:rgb(241, 239, 239);
+	font-size: 25px;
+	margin-left: 90px;
+}
+.contact a{
+	color: white;
+}
+.event{
+	font-family: Perpetua;
+	font-size: 30px;
+}
+.event:hover a{
+	color: #42a0df;
+}
+.icon{
+	display: flex;
+	justify-content: space-around;
+	padding: 70 20;
+	color: black;
+	text-align: center;
+}
+#cell{
+	font-size: 40px;
+}
+#call-icon{
+	font-size: 30px;
+}
+.icon-logo{
+	font-size: 50px;
+}
+#id{
+font-size: 50px;
+}
